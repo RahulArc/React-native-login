@@ -3,6 +3,27 @@ import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react
 
 
 const styles = StyleSheet.create({
+    form :{
+        flex: 1,
+        backgroundColor : '#ffff',
+        marginTop: 20,
+        width: 400,
+        height: null,
+        opacity: 0.3
+
+    },
+    boxWithShadow: {
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 8,
+        },
+        shadowOpacity: 0.7,
+        shadowRadius: 10.32,
+        
+        elevation: 16,
+
+    },
     backgroundImage:{
       width: 1300,
       height: 820,

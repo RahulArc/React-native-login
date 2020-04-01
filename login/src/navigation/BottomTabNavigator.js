@@ -40,7 +40,7 @@ function getHeaderTitle(route) {
 
   switch (routeName) {
     case 'Home':
-      return 'Arc Wealth Online';
+      return 'Arc Vault';
     case 'Links':
       return 'Links to learn more';
   }

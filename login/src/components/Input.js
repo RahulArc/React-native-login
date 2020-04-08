@@ -26,7 +26,7 @@ export default class Inputs extends Component {
      <KeyboardAvoidingView style={styleForm.containerView} behavior = "padding">
        
          <View style = {styleForm.containerView}>
-            <View style={{padding:20}}></View>
+            <View style={{padding:5}}></View>
             
             <TextInput style = {styleForm.loginFormTextInput}
                underlineColorAndroid = "transparent"
@@ -35,7 +35,7 @@ export default class Inputs extends Component {
                autoCapitalize = "none"
                onChangeText = {this.handleEmail}/>
 
-               <View style={{padding:10}}></View>
+               <View style={{padding:5}}></View>
             
             <TextInput style = {styleForm.loginFormTextInput}
                underlineColorAndroid = "transparent"
@@ -45,19 +45,24 @@ export default class Inputs extends Component {
                secureTextEntry={true}
                onChangeText = {this.handlePassword}/>
 
-               <View style={{padding:10}}></View>
+               <View style={{padding:5}}></View>
 
             <TouchableOpacity
                style = {styleForm.submitButton}
                onPress = {
                   () => this.login(this.state.username, this.state.password)
                }>
-               <Text style = {styleForm.submitButtonText}> Submit </Text>
+               <Text style = {[styleForm.submitButtonText]}> Submit </Text>
             </TouchableOpacity>
 
             <View style={{paddingTop:0}}>
-               <Text style={{color: 'grey', textAlign:'center'}}>
-                    Terms and Conditions
+               <Text style={{color: '#000', textAlign:'center', paddingLeft:15, paddingRight:15}}>
+                  By logging in to this system, you have read and fully understood and agree
+                  to the 
+                   <Text style={{color:'violet', paddingLeft:3,paddingRight:3}}>
+                      Terms and Conditions  
+                   </Text>
+                     of the Online Services Application Form
               </Text>
             </View>
             
@@ -114,7 +119,7 @@ const styleForm = StyleSheet.create({
       borderWidth: 2,
       borderColor: '#eaeaea',
       backgroundColor: '#fafafa',
-      padding: 10,
+      padding: 5,
       marginLeft: 15,
       marginRight: 15,
       marginTop: 5,
@@ -135,50 +140,3 @@ const styleForm = StyleSheet.create({
     },
 })
 
-{/* <KeyboardAvoidingView style={style.containerView} behavior = "padding">
-                            
-                            <TouchableWithoutFeedback onPress = {Keyboard.dismiss}>
-                
-                                <View style={style.loginScreenContainer}>
-                                    <View style={{padding:10}}>                            
-                                    </View>
-                                    <View style={style.loginFormView}>
-                                        <TextInput 
-                                            placeholder="Username" 
-                                            placeholderTextColor = "#c4c3cb" 
-                                            style={style.loginFormTextInput} 
-                                            autoCapitalize = "none"
-                                            editable={true}
-                                            onChangeText={this.handleUsername}
-                                        />
-
-                                        <View style={{padding:10}}>                            
-                                        </View>
-
-                                        <TextInput 
-                                            placeholder="Password" 
-                                            placeholderTextColor="#c4c3cb" 
-                                            stye = {style.loginPassword} 
-                                            autoCapitalize = "none"
-                                            secureTextEntry={true} 
-                                            editable={true}
-                                            onChangeText = {this.handlePassword}
-                                        />
-
-                                        <View style={{padding:10}}>                            
-                                        </View>
-
-                                        <Button 
-                                            buttonStyle={style.loginButton}
-                                            onPress={
-                                                ()=>
-                                                this.onLoginPress(this.state.username,this.state.password)
-                                            }
-                                            title="Login"
-                                        />
-                                        
-                                    </View>
-                                </View>
-                            </TouchableWithoutFeedback>
-                
-                            </KeyboardAvoidingView> */}

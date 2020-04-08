@@ -28,15 +28,15 @@ export default class Login extends React.Component{
             <View style={stylesx.container}>
                
                 <View style = {stylesx.backgroundContainer}>
-                    <Image source = {require('../../assets/images/whitem.jpg')} resizeMode = 'cover' style = {Platform.OS === 'web'?stylesx.backdrop :styles.backgroundImage  } />
+                    <Image source = {require('../../assets/images/greyl.jpg')} resizeMode = 'cover' style = {Platform.OS === 'web'?stylesx.backdrop :styles.backgroundImage  } />
                 </View>
                 
                     <View style={[Platform.OS ==='web'?styles.form :stylesx.form, stylesx.boxWithShadow,stylesx.overlay]}>
                          
-                         <Text style={[stylesx.headline]}>
+                         {/* <Text style={[stylesx.headline]}>
                             Vault
-                        </Text>  
-
+                        </Text>   */}
+                        <Image source = {require('../../assets/images/vault.jpg')}  style = {{width:140,height:100, marginLeft:105, marginTop:5}} />
                                                
                         <Input />
                         

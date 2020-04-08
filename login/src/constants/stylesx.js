@@ -5,13 +5,13 @@ var stylesx = StyleSheet.create({
         flex: 1,
         backgroundColor : '#ffff',
         marginTop: 20,
-        opacity: 0.3,
+        opacity: 0.8,
         width: 350,
         height: 50
 
     },
     boxWithShadow: {
-        shadowColor: "#000",
+        shadowColor: "#fff",
         shadowOffset: {
             width: 0,
             height: 12,
@@ -38,8 +38,8 @@ var stylesx = StyleSheet.create({
   overlay: {
     padding: 10 ,
     marginTop: 20,
-    opacity: 0.6,
-    backgroundColor: '#ffff'
+    opacity: 0.9,
+    backgroundColor: '#fff'
   },
   logo: {
     backgroundColor: 'rgba(0,0,0,0)',

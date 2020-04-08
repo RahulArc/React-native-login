@@ -9,11 +9,11 @@ const styles = StyleSheet.create({
         marginTop: 20,
         width: 400,
         height: null,
-        opacity: 0.3
+        opacity: 0.8
 
     },
     boxWithShadow: {
-        shadowColor: "#000",
+        shadowColor: "#fff",
         shadowOffset: {
             width: 0,
             height: 8,
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
           shadowRadius: 3,
         },
         android: {
-          elevation: 20,
+          elevation: 24,
         },
       }),
       alignItems: 'center',

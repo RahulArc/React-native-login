@@ -2,11 +2,11 @@
 
 JWT secures the application and uses authentication 
 
-#### Run the application as spring boot app
+## Run the application as spring boot app
 
 ### Step 1: Register the username and password as a POST request as shown in Postman
-![Test Image 1](images/s1.png)
 
+![Test Image 1](images/s1.png)
 
 ![Test Image 2](images/s2.png)
 

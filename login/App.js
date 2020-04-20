@@ -17,6 +17,7 @@ export default function App(props) {
   const containerRef = React.useRef();
   const { getInitialState } = useLinking(containerRef);
 
+  const data=[];
   // Load any resources or data that we need prior to rendering the app
   React.useEffect(() => {
     async function loadResourcesAndDataAsync() {
@@ -25,7 +26,7 @@ export default function App(props) {
 
         // Load our initial navigation state
         setInitialNavigationState(await getInitialState());
-
+        {console.log(data);}
         // Load fonts
         await Font.loadAsync({
           ...Ionicons.font,
@@ -59,6 +60,8 @@ export default function App(props) {
     );
   }
 }
+
+
 
 const styles = StyleSheet.create({
   container: {

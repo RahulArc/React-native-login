@@ -12,15 +12,23 @@ import {Keyboard,TouchableWithoutFeedback, Alert, KeyboardAvoidingView} from 're
 import {Button} from 'react-native-elements';
 import style from '../components/styleForm';
 
+//https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets
+//https://feeds.citibikenyc.com/stations/stations.json
+
 export default class Login extends React.Component{    
 
     constructor(props){
         super(props);
         this.state = {  username:"",
-                        password:""
+                        password:"",
+                        data: []
         };
     }
-   
+    componentDidMount(){
+         fetch(`https://cors-anywhere.herokuapp.com/https://feeds.citibikenyc.com/stations/stations.json`)
+        .then(res=>res.json())
+        .then(json=> this.setState({data:json}));
+       }
    
     render(){
         return (        
@@ -32,24 +40,15 @@ export default class Login extends React.Component{
                 </View>
                 
                     <View style={[Platform.OS ==='web'?styles.form :stylesx.form, stylesx.boxWithShadow,stylesx.overlay]}>
-                         
-                         {/* <Text style={[stylesx.headline]}>
-                            Vault
-                        </Text>   */}
+                                              
                         <Image source = {require('../../assets/images/vault.jpg')}  style = {{width:140,height:100, marginLeft:105, marginTop:5}} />
                                                
-                        <Input />
-                        
-                       
+                        <Input />                       
+                       {console.log(this.state.data)}
                     </View>            
 
                 <View style={{padding:10}}></View>
-               
-                {/* <View style = {Platform.OS==='web'?styles.overlay: stylesx.overlay}>
-                    <Text style = {stylesx.headline}>It should appear in front of the Background Image</Text>
-                    
-                </View> */}
-            
+                                          
             </View>
            
         );
